@@ -503,8 +503,11 @@ header a.active::after {
 
 /* FOOTER */
 footer {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  width: 100%;
   margin-top: auto;
   padding: 1rem;
   background: var(--gray-200);
