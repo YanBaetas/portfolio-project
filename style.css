@@ -364,6 +364,7 @@ header a.active::after {
 #hero-banner .container div {
   max-width: 700px;
   margin-bottom: 2rem;
+  animation: slideFromTop 0.8s;
 }
 
 #hero-banner .container div:last-child {
@@ -375,6 +376,7 @@ header a.active::after {
   width: 70%;
   border-radius: 50%;
   box-shadow: 0 0 5px #000;
+  animation: slideFromTop 0.8s;
 }
 
 #hero-banner .container button {
@@ -476,9 +478,14 @@ header a.active::after {
   padding: 2rem 0;
 }
 
+#contact .slide-top {
+  animation: slideFromTop 0.7s;
+}
+
 #contact ul {
   list-style: none;
   display: inline-block;
+  animation: slideLeft 0.7s;
 }
 
 #contact ul li a {
@@ -526,9 +533,11 @@ footer {
 @keyframes slideLeft {
   from {
     transform: translateX(-100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -538,6 +547,17 @@ footer {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
